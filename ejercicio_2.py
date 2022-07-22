@@ -1,6 +1,5 @@
-
-
 from tkinter import *
+import math
 
 # Ventana Principal
 
@@ -13,16 +12,16 @@ ventana_principal.geometry("800x500")
 ventana_principal.config(bg="black")
 
 
+
 # Funciones
 
 def Calcular():
-    c=int(x.get()) * 0.19
-    z=int(x.get()) + c
-    t_resultado.insert(INSERT, " El producto con precio de " + x.get() + " Más " + " el 19% " " de iva" + " queda con valor total de " + str(z)  + "\n")
+    z=pow(int(n.get()),1/int(x.get()))
+    t_resultado.insert(INSERT, " La raiz de  " + n.get() + " Con Indice de  " + x.get()  + " Es igual a  " + str(z)  + "\n")
 
 def Borrar():
+    n.set("")
     x.set("")
-    c.set("")
     t_resultado.delete("1.0" , "end")
     
 
@@ -34,8 +33,8 @@ def Borrar():
 
 # Variables 
 
+n=StringVar()
 x=StringVar()
-c=StringVar()
 z=StringVar
 
 # Frames
@@ -50,14 +49,25 @@ frame_resul.place(x=10 , y=390)
 # Etiquetas
 
 entry_1=Label(frame_pre , )
-entry_1.config(bg="black" ,  fg="White" , text="Precio Producto", font=("Arial",15))
+entry_1.config(bg="black" ,  fg="White" , text="Valor del Radicando ", font=("Arial",15))
 entry_1.place(x=240 , y=120)
+
+entry_1=Label(frame_pre , )
+entry_1.config(bg="black" ,  fg="White" , text="Valor del Indice ", font=("Arial",15))
+entry_1.place(x=240 , y=180)
+
+
+
 
 # Entry
 
-Valor_1=Entry(frame_pre , width=9 , textvariable=x)
+Valor_1=Entry(frame_pre , width=9 , textvariable=n)
 Valor_1.config(font=("Arial",20),justify=CENTER)
-Valor_1.place(x=400, y=120)
+Valor_1.place(x=450, y=120)
+
+Valor_2=Entry(frame_pre , width=9 , textvariable=x)
+Valor_2.config(font=("Arial",20),justify=CENTER)
+Valor_2.place(x=450, y=180)
 
 # Botones
 
@@ -75,6 +85,7 @@ btn_Bor.place(x=117, y=250)
 t_resultado= Text(frame_resul, width=52 , height=2)
 t_resultado.config(bg="blue" , fg="White", font=("Arial" , 20))
 t_resultado.pack()
+
 
 # Mainloop
 
