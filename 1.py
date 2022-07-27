@@ -1,22 +1,17 @@
+from cmath import pi
 import math
-import zlib
 
 
-print("-------------------------------")
-print("---- Hallar la raiz-------")
-print("-------------------------------")
 
+# input
 
-# input 
+radio=int(input("Digite el valor del radio : "))
 
-x=int(input("Digite el valor del radiacando"))
-n=int(input("Digite el valor del indice"))
+# processing
 
-# processing 
+area= math.pi*radio*radio
+perimetro= 2*math.pi*radio
 
-z= pow(x,1/n)
+# output
 
-
-# ouput
-
-print("la raiz de " + str (x) + " con indice " + str(n) + " es igual a "  + str(z))
+print(" El area con radio de " + str(radio) + " es igual a: " + str(area) + " y el perimetro es igual a: "  + str(perimetro))
