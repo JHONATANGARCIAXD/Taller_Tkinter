@@ -1,4 +1,5 @@
 from tkinter import *
+from tokenize import String
 
 
 # Ventana Principal
@@ -18,14 +19,28 @@ ventana_principal.resizable(0,0)
 # Funciones
 
 def Calcular():
- 
-     t_resultado.insert(INSERT,("El Número " + N.get() + "en inverso es " + str(c4)))
+     E=int(N.get()) % 10
+     E1=int(N.get())//10
+     E2=(E*1000)
+     I=(E1 % 10)
+     I1=(E1 // 10)
+     I2=(I * 100)
+     O=(I1 % 10)
+     O1=(I1 // 10)
+     O2=(O * 10)
 
+     z=E2 + I2 + O2 + O1
+
+     t_resultado.insert(INSERT,"El número " + N.get() + " de forma inversa es " + str(z) + "\n")
+
+
+    
 
 
                                                                                                         
 def Borrar():
-    N.set("")
+   
+
     t_resultado.delete("1.0" , "end")
     
 
@@ -38,10 +53,22 @@ def Borrar():
 # Variables 
 
 N=StringVar()
-c4=StringVar()
-c3=StringVar()
-c2=StringVar()
-c1=StringVar()
+
+E=StringVar()
+E1=StringVar()
+E2=StringVar()
+
+I=StringVar()
+I1=StringVar()
+I2=StringVar()
+
+O=StringVar()
+S=StringVar()
+O2=StringVar()
+
+Z=StringVar()
+
+
 
 
 # Frames
