@@ -28,9 +28,6 @@ def Borrar():
 
 
 
-
-
-
 # Variables 
 
 n=StringVar()
