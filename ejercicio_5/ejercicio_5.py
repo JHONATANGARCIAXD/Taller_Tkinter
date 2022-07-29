@@ -12,7 +12,7 @@ from tkinter import *
 
 ventana_principal=Tk()
 
-ventana_principal.title("IVA")
+ventana_principal.title("AREA Y PERIMETRO")
 
 ventana_principal.geometry("800x500")
 

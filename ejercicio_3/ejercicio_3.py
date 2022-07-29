@@ -6,7 +6,7 @@ from tokenize import String
 
 ventana_principal=Tk()
 
-ventana_principal.title("IVA")
+ventana_principal.title("NÚMERO INVERSO")
 
 ventana_principal.geometry("800x500")
 

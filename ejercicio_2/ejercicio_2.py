@@ -5,7 +5,7 @@ import math
 
 ventana_principal=Tk()
 
-ventana_principal.title("IVA")
+ventana_principal.title("RAIZ")
 
 ventana_principal.geometry("800x500")
 

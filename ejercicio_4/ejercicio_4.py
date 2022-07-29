@@ -7,7 +7,7 @@ import math
 
 ventana_principal=Tk()
 
-ventana_principal.title("IVA")
+ventana_principal.title("SUMA N PRIMEROS NÚMEROS ENTEROS")
 
 ventana_principal.geometry("800x500")
 
